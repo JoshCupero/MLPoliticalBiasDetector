@@ -50,3 +50,4 @@ else:
         print("Data saved to data/allsides_bias_data.csv")
     else:
         print("No data scraped")
+        
