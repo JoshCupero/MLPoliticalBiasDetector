@@ -1,0 +1,55 @@
+2025-03-09 05:42:06,798 - Failed to scrape https://www.washingtonpost.com/politics/: HTTPSConnectionPool(host='www.washingtonpost.com', port=443): Read timed out. (read timeout=10)
+2025-03-09 05:42:58,013 - Failed to scrape https://thehill.com/homenews/campaign: 403 Client Error: Forbidden for url: https://thehill.com/homenews/campaign/
+2025-03-09 05:43:10,054 - Failed to scrape https://thehill.com/homenews/campaign: 403 Client Error: Forbidden for url: https://thehill.com/homenews/campaign/
+2025-03-09 05:43:19,405 - Failed to scrape https://thehill.com/homenews/campaign: 403 Client Error: Forbidden for url: https://thehill.com/homenews/campaign/
+2025-03-09 05:45:08,653 - Failed to scrape https://www.reuters.com/us/: 401 Client Error: HTTP Forbidden for url: https://www.reuters.com/us/
+2025-03-09 05:45:14,236 - Failed to scrape https://www.reuters.com/us/: 401 Client Error: HTTP Forbidden for url: https://www.reuters.com/us/
+2025-03-09 05:45:22,177 - Failed to scrape https://www.reuters.com/us/: 401 Client Error: HTTP Forbidden for url: https://www.reuters.com/us/
+2025-03-09 05:50:18,331 - Failed to scrape https://www.realclearpolitics.com: 403 Client Error: HTTP Forbidden for url: https://www.realclearpolitics.com/
+2025-03-09 05:50:24,878 - Failed to scrape https://www.realclearpolitics.com: 403 Client Error: HTTP Forbidden for url: https://www.realclearpolitics.com/
+2025-03-09 05:50:36,949 - Failed to scrape https://www.realclearpolitics.com: 403 Client Error: HTTP Forbidden for url: https://www.realclearpolitics.com/
+2025-03-09 05:55:48,724 - Failed to scrape https://www.americanmagazine.org/politics: HTTPSConnectionPool(host='www.americanmagazine.org', port=443): Max retries exceeded with url: /politics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000026E495D6020>, 'Connection to www.americanmagazine.org timed out. (connect timeout=10)'))
+2025-03-09 05:56:09,841 - Failed to scrape https://www.americanmagazine.org/politics: HTTPSConnectionPool(host='www.americanmagazine.org', port=443): Max retries exceeded with url: /politics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000026E495D77C0>, 'Connection to www.americanmagazine.org timed out. (connect timeout=10)'))
+2025-03-09 05:56:34,339 - Failed to scrape https://www.americanmagazine.org/politics: HTTPSConnectionPool(host='www.americanmagazine.org', port=443): Max retries exceeded with url: /politics (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x0000026E495D7A60>, 'Connection to www.americanmagazine.org timed out. (connect timeout=10)'))
+2025-03-09 05:59:51,769 - Failed to scrape https://www.csmonitor.com/USA/{concat( $cap_base_url, '/logout_all' )}: 404 Client Error: Not Found for url: https://www.csmonitor.com/USA/%7Bconcat(%20$cap_base_url,%20'/logout_all'%20)%7D
+2025-03-09 05:59:59,140 - Failed to scrape https://www.csmonitor.com/USA/{concat( $cap_base_url, '/logout_all' )}: 404 Client Error: Not Found for url: https://www.csmonitor.com/USA/%7Bconcat(%20$cap_base_url,%20'/logout_all'%20)%7D
+2025-03-09 06:00:06,856 - Failed to scrape https://www.csmonitor.com/USA/{concat( $cap_base_url, '/logout_all' )}: 404 Client Error: Not Found for url: https://www.csmonitor.com/USA/%7Bconcat(%20$cap_base_url,%20'/logout_all'%20)%7D
+2025-03-09 06:02:11,946 - Failed to scrape https://www.wsj.com/: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/
+2025-03-09 06:02:24,078 - Failed to scrape https://www.wsj.com/: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/
+2025-03-09 06:02:32,826 - Failed to scrape https://www.wsj.com/: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/
+2025-03-09 06:02:50,847 - Failed to scrape https://www.wsj.com/?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/?mod=nav_left_section
+2025-03-09 06:03:02,293 - Failed to scrape https://www.wsj.com/?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/?mod=nav_left_section
+2025-03-09 06:03:07,866 - Failed to scrape https://www.wsj.com/?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/?mod=nav_left_section
+2025-03-09 06:03:17,397 - Failed to scrape https://www.wsj.com/world?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/world?mod=nav_left_section
+2025-03-09 06:03:29,263 - Failed to scrape https://www.wsj.com/world?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/world?mod=nav_left_section
+2025-03-09 06:03:34,371 - Failed to scrape https://www.wsj.com/world?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/world?mod=nav_left_section
+2025-03-09 06:03:49,464 - Failed to scrape https://www.wsj.com/business?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business?mod=nav_left_section
+2025-03-09 06:04:03,584 - Failed to scrape https://www.wsj.com/business?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business?mod=nav_left_section
+2025-03-09 06:04:18,072 - Failed to scrape https://www.wsj.com/business?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/business?mod=nav_left_section
+2025-03-09 06:04:28,135 - Failed to scrape https://www.wsj.com/us-news?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/us-news?mod=nav_left_section
+2025-03-09 06:04:42,035 - Failed to scrape https://www.wsj.com/us-news?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/us-news?mod=nav_left_section
+2025-03-09 06:04:48,866 - Failed to scrape https://www.wsj.com/us-news?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/us-news?mod=nav_left_section
+2025-03-09 06:05:02,814 - Failed to scrape https://www.wsj.com/politics?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/politics?mod=nav_left_section
+2025-03-09 06:05:12,667 - Failed to scrape https://www.wsj.com/politics?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/politics?mod=nav_left_section
+2025-03-09 06:05:20,172 - Failed to scrape https://www.wsj.com/politics?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/politics?mod=nav_left_section
+2025-03-09 06:05:32,262 - Failed to scrape https://www.wsj.com/economy?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/economy?mod=nav_left_section
+2025-03-09 06:05:44,764 - Failed to scrape https://www.wsj.com/economy?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/economy?mod=nav_left_section
+2025-03-09 06:05:51,673 - Failed to scrape https://www.wsj.com/economy?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/economy?mod=nav_left_section
+2025-03-09 06:06:03,052 - Failed to scrape https://www.wsj.com/tech?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/tech?mod=nav_left_section
+2025-03-09 06:06:14,975 - Failed to scrape https://www.wsj.com/tech?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/tech?mod=nav_left_section
+2025-03-09 06:06:24,276 - Failed to scrape https://www.wsj.com/tech?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/tech?mod=nav_left_section
+2025-03-09 06:06:34,933 - Failed to scrape https://www.wsj.com/finance?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/finance?mod=nav_left_section
+2025-03-09 06:06:49,987 - Failed to scrape https://www.wsj.com/finance?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/finance?mod=nav_left_section
+2025-03-09 06:07:01,138 - Failed to scrape https://www.wsj.com/finance?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/finance?mod=nav_left_section
+2025-03-09 06:07:17,789 - Failed to scrape https://www.wsj.com/opinion?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/opinion?mod=nav_left_section
+2025-03-09 06:07:24,874 - Failed to scrape https://www.wsj.com/opinion?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/opinion?mod=nav_left_section
+2025-03-09 06:07:36,409 - Failed to scrape https://www.wsj.com/opinion?mod=nav_left_section: 401 Client Error: HTTP Forbidden for url: https://www.wsj.com/opinion?mod=nav_left_section
+2025-03-09 06:07:47,064 - Failed to scrape https://www.christianpost.com/news/politics/: 404 Client Error: Not Found for url: https://www.christianpost.com/news/politics/
+2025-03-09 06:07:56,736 - Failed to scrape https://www.christianpost.com/news/politics/: 404 Client Error: Not Found for url: https://www.christianpost.com/news/politics/
+2025-03-09 06:08:08,381 - Failed to scrape https://www.christianpost.com/news/politics/: 404 Client Error: Not Found for url: https://www.christianpost.com/news/politics/
+2025-03-09 06:10:44,331 - Failed to scrape https://www.aljazeera.com/news/politics/: 404 Client Error: Not Found for url: https://www.aljazeera.com/news/politics/
+2025-03-09 06:10:58,891 - Failed to scrape https://www.aljazeera.com/news/politics/: 404 Client Error: Not Found for url: https://www.aljazeera.com/news/politics/
+2025-03-09 06:11:04,181 - Failed to scrape https://www.aljazeera.com/news/politics/: 404 Client Error: Not Found for url: https://www.aljazeera.com/news/politics/
+2025-03-09 06:11:10,313 - Failed to scrape https://www.bloomberg.com/politics: 403 Client Error: Forbidden for url: https://www.bloomberg.com/politics
+2025-03-09 06:11:19,608 - Failed to scrape https://www.bloomberg.com/politics: 403 Client Error: Forbidden for url: https://www.bloomberg.com/politics
+2025-03-09 06:11:27,775 - Failed to scrape https://www.bloomberg.com/politics: 403 Client Error: Forbidden for url: https://www.bloomberg.com/politics

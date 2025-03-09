@@ -1,32 +1,89 @@
-import re
 import pandas as pd
+import re
 import nltk
-import spacy
+import contractions
+import emoji
 from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
 
-# Download NLTK stopwords
+# Download necessary resources
 nltk.download("stopwords")
+nltk.download("punkt")
+nltk.download("omw-1.4")
+nltk.download("wordnet")
+
+# Define stopwords and lemmatizer
 stop_words = set(stopwords.words("english"))
+lemmatizer = WordNetLemmatizer()
 
-# Load spaCy model for lemmatization
-nlp = spacy.load("en_core_web_sm")
-print(" spaCy model loaded successfully!")
-
-# Function to clean text
 def clean_text(text):
-    text = text.lower()  # Convert text to lowercase
-    text = re.sub(r"\W", " ", text)  # Remove special characters
-    text = re.sub(r"\D+", " ", text)  #Remove numbers
-    text = " ".join([word for word in text.split() if word not in stop_words])  # Remove stopwords
-    text = " ".join([token.lemma_ for token in nlp(text)])  # Lemmatize text
-    return text
+    """Cleans and preprocesses the given text."""
+    if not isinstance(text, str):
+        return ""
 
-# Load scraped data
-df = pd.read_csv("data/allsides_bias_data.csv")
+    # Expand contractions (e.g., "don't" -> "do not")
+    text = contractions.fix(text)
 
-# Apply cleaning
-df["cleaned_text"] = df["source"].apply(clean_text)
+    # Convert to lowercase
+    text = text.lower()
 
-# Save cleaned data
-df.to_csv("data/cleaned_news_data.csv", index=False)
-print("C;eaned data saved to data/cleaned_news_data.csv")
+    # Remove URLs
+    text = re.sub(r"http\S+|www\S+|https\S+", "", text, flags=re.MULTILINE)
+
+    # Remove HTML tags
+    text = re.sub(r"<.*?>", "", text)
+
+    # Remove emojis & special characters
+    text = emoji.replace_emoji(text, replace="")  # Remove emojis
+    text = text.encode("ascii", "ignore").decode()  # Remove non-ASCII characters
+
+    # Remove special characters, numbers, and punctuation
+    text = re.sub(r"[^a-zA-Z\s]", " ", text)  # Replace with space to maintain spacing
+
+    # Normalize whitespace
+    text = re.sub(r"\s+", " ", text).strip()
+
+    # Remove single characters (isolated letters)
+    text = re.sub(r"\b[a-zA-Z]\b", "", text)
+
+    # Tokenization
+    words = word_tokenize(text)
+
+    # Remove stopwords and lemmatize words
+    cleaned_words = [lemmatizer.lemmatize(word) for word in words if word not in stop_words]
+
+    # Rejoin words into a cleaned sentence
+    cleaned_text = " ".join(cleaned_words)
+
+    return cleaned_text
+
+def process_dataset(input_file, output_file):
+    """Loads dataset, cleans the text columns, and saves the updated data."""
+    try:
+        # Load CSV
+        df = pd.read_csv(input_file)
+
+        # Ensure required columns exist
+        if "content" not in df.columns or "title" not in df.columns:
+            raise ValueError("CSV must contain 'content' and 'title' columns.")
+
+        # Clean 'content' and 'title' separately
+        df["cleaned_content"] = df["content"].apply(clean_text)
+        df["cleaned_title"] = df["title"].apply(clean_text)
+
+        # Drop rows where 'cleaned_content' or 'cleaned_title' is empty
+        df = df.dropna(subset=["cleaned_content", "cleaned_title"])
+
+        # Save everything, including the new cleaned columns
+        df.to_csv(output_file, index=False)
+        print(f"✅ Cleaned data saved to {output_file}")
+
+    except Exception as e:
+        print(f"❌ Error processing dataset: {e}")
+
+if __name__ == "__main__":
+    input_csv = "data/raw_articles/scraped_articles.csv"
+    output_csv = "data/processed_data/cleaned_articles.csv"
+    
+    process_dataset(input_csv, output_csv)
